@@ -42,6 +42,7 @@ print("""
   4 -> Delete an element
   5 -> Arrange in ascending order
   6 -> Arrange in descending order
+  7 -> define the largest element
 """)
 
 menuInput = int(input("What do you want to do? (1-8): "))
@@ -84,6 +85,9 @@ elif menuInput == 6:
     print("The list has been arranged in descending order.")
     print(f"This is the new array. Array = {List_Value}")
     
-
+elif menuInput == 7:
+    largest = max(List_Value)
+    print("The list has Define the largest Number.")
+    print(f"The Largest Number is = {largest}")
     
     
