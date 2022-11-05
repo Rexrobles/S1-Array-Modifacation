@@ -40,14 +40,16 @@ print("""
   2 -> Insert an element
   3 -> Modify an element
   4 -> Delete an element
-  5 -> Arrange in ascending order
-  6 -> Arrange in descending order
-  7 -> define the largest element
+  5 -> Total sum of element
+  6 -> define the largest element
+  7 -> Arrange in ascending order
+  8 -> Arrange in descending order
+  9 -> count the times the element appears
 """)
 
-menuInput = int(input("What do you want to do? (1-8): "))
-if menuInput not in range(1, 9):
-        print("Invalid! Please enter 1 to 8 only.")
+menuInput = int(input("What do you want to do? (1-9): "))
+if menuInput not in range(1, 10):
+        print("Invalid! Please enter 1 to 9 only.")
 
 if menuInput == 1:
     numberAdd = int(input("Enter the number you want to add: "))
@@ -76,18 +78,26 @@ elif menuInput == 4:
     print(f"This is the new array. Array = {List_Value}")
     
 elif menuInput == 5:
-    List_Value.sort()
-    print("The list has been arranged in ascending order.")
-    print(f"This is the new array. Array = {List_Value}")
+    Total = sum(List_Value)
+    print("This is the total sum of all element")
+    print(f"The total sum is = {Total}")
     
 elif menuInput == 6:
-    List_Value.reverse()
-    print("The list has been arranged in descending order.")
-    print(f"This is the new array. Array = {List_Value}")
-    
-elif menuInput == 7:
     largest = max(List_Value)
     print("The list has Define the largest Number.")
     print(f"The Largest Number is = {largest}")
     
+elif menuInput == 7:
+    List_Value.sort()
+    print("The list has been arranged in ascending order.")
+    print(f"This is the new array. Array = {List_Value}")
     
+elif menuInput == 8:
+    List_Value.reverse()
+    print("The list has been arranged in descending order.")
+    print(f"This is the new array. Array = {List_Value}")
+    
+elif menuInput == 9:
+    numberInputCount = int(input("Enter the number for which you want to know the occurrence in the list: "))
+    numberCount = List_Value.count(numberInputCount)
+    print(f"The number {numberInputCount} was shown {numberCount} times in the list.")
