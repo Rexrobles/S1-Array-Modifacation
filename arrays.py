@@ -29,10 +29,7 @@
 # The element has been deleted
 # This is the new array: Array: [1, 4, 3, 4, 5, 6 ,2 ,56, 200]
 
-List_Value = [14, 3, 15, 27, 14, 10, 6, 24, 100, 5]
-print(List_Value)
 
-print(f"List: {List_Value}")
 
 print("""
   Menu:
@@ -46,6 +43,10 @@ print("""
   8 -> Arrange in descending order
   9 -> count the times the element appears
 """)
+
+List_Value = [14, 3, 15, 27, 14, 10, 6, 24, 100, 5]
+
+print(f"List: {List_Value}")
 
 menuInput = int(input("What do you want to do? (1-9): "))
 if menuInput not in range(1, 10):
